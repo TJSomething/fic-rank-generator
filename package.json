@@ -1,0 +1,25 @@
+{
+  "name": "fic-rank-generator",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "author": "Thomas Kelly <tjbk123@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jsdom": "^16.2.3",
+    "@types/node": "^14.0.27",
+    "@typescript-eslint/eslint-plugin": "^3.9.0",
+    "@typescript-eslint/parser": "^3.9.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-airbnb-typescript": "^9.0.0",
+    "eslint-plugin-import": "^2.21.2",
+    "typescript": "^3.9.7"
+  },
+  "scripts": {
+    "lint": "eslint --ext .js,.ts"
+  },
+  "dependencies": {
+    "jsdom": "^16.4.0",
+    "ts-node": "^8.10.2"
+  }
+}
