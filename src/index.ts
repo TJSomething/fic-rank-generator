@@ -11,9 +11,9 @@ function help() {
   console.log('Syntax:');
   console.log(`${process.argv[0]} ${process.argv[1]} <command>`);
   console.log('Commands:');
-  console.log('print\trenders the page to the command line');
-  console.log('save <file name>\trenders the page to the command line');
-  console.log('update\tupdates the rendered page on the site');
+  console.log('print             renders the page to the command line');
+  console.log('save <file name>  saves the page to a file');
+  console.log('update            updates the rendered page on the site');
 }
 
 async function render(): Promise<string> {
