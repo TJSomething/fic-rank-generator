@@ -20,7 +20,6 @@
             <th scope="col">De-recs</th>
             <th scope="col">Net recs</th>
             <th scope="col">Score</th>
-            <th scope="col"></th>
           </tr>
         </thead>
         <tbody>
@@ -37,23 +36,6 @@
               <td>{{derecommendations}}</td>
               <td>{{netRecommendations}}</td>
               <td>{{round score 3}}</td>
-              <td>
-                <button
-                  class="btn btn-primary"
-                  type="button"
-                  data-toggle="collapse"
-                  data-target="#{{slugify title}}-details"
-                  role="button"
-                  aria-expanded="false"
-                  aria-controls="{{slugify title}}-details"
-                  alt="Details"
-                >&#9660;</button>
-              </td>
-            </tr>
-            <tr class="collapse" id="{{slugify title}}-details">
-              <td colspan="6">
-                {{{htmlBody}}}
-              </td>
             </tr>
           {{/each}}
         </tbody>
