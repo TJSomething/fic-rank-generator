@@ -16,13 +16,18 @@
     "typescript": "^3.9.7"
   },
   "scripts": {
-    "run": "ts-node src/index.ts",
-    "lint": "eslint --ext .js,.ts .",
-    "lint:fix": "eslint --ext .js,.ts --fix ."
+    "update": "ts-node src/index.ts update",
+    "lint": "eslint --ext .js,.ts src",
+    "lint:fix": "eslint --ext .js,.ts --fix src"
   },
   "dependencies": {
+    "@types/node-fetch": "^2.5.7",
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "form-data": "^3.0.0",
     "handlebars": "^4.7.6",
     "jsdom": "^16.4.0",
+    "node-fetch": "^2.6.0",
     "ts-node": "^8.10.2"
   }
 }

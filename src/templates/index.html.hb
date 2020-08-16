@@ -66,6 +66,9 @@
         href="https://forums.spacebattles.com/members/gashadokuro-amanojaku.451312/">Gashadokuro
         Amanojaku</a>.
       </p>
+      <p>
+        This page was last updated at {{date}}.
+      </p>
     </div>
   </body>
 </html>

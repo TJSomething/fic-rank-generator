@@ -62,6 +62,8 @@ function lowerWilsonScore(up: number, total: number): number {
   return (a - b) / c;
 }
 
+const standingRegex = /Standing: *(\+[0-9]+)\|(-[0-9]+)/;
+
 export async function extractFics(threadmarkUrl: string): Promise<ReadonlyArray<Fic>> {
   const recListPage = await JSDOM.fromURL(threadmarkUrl);
   const updateTime = recListPage.window.document.querySelector(
@@ -76,7 +78,7 @@ export async function extractFics(threadmarkUrl: string): Promise<ReadonlyArray<
     ),
   ).filter(
     (el) => el.textContent
-    && el.textContent.match(/Standing: *(\+[0-9]+)\|(-[0-9]+)/) !== null,
+    && standingRegex.exec(el.textContent) !== null,
   );
 
   return ficBoxes.map((el) => {
@@ -84,7 +86,7 @@ export async function extractFics(threadmarkUrl: string): Promise<ReadonlyArray<
     if (!textContent) {
       throw new Error('post parsing error');
     }
-    const match = textContent.match(/Standing: *(\+[0-9]+)\|(-[0-9]+)/);
+    const match = standingRegex.exec(textContent);
     if (!match) {
       throw new Error('post parsing error');
     }
