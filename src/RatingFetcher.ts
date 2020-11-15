@@ -23,7 +23,7 @@ export async function getRecommendationListThreadmarks(
 ): Promise<ReadonlyArray<string>> {
   const threadPage1 = await JSDOM.fromURL(threadUrl);
   const threadmarkLinks = threadPage1.window.document.querySelectorAll(
-    '.block-outer-main--threadmarks .menu-content a',
+    '.block-outer-threadmarks .menu-content a',
   );
   const recListLinks = (Array.from(
     threadmarkLinks,
