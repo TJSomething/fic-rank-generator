@@ -29,7 +29,7 @@ export async function getRecommendationListThreadmarks(
     threadmarkLinks,
   ) as HTMLAnchorElement[]).filter(
     (link) => link.textContent
-    && link.textContent.indexOf('Recommendation List') !== -1,
+    && /Rec+om+endation List/.exec(link.textContent),
   );
   if (recListLinks.length === 0) {
     throw new Error('recommendation lists not found');
